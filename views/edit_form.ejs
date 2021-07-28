@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <h1>수정하기(이름 나와야함)</h1>
+    <form method="post" action='/edit'>
+        아이디: <input type="text" value="<%= list.id %>" name="id" readonly><br>
+        이름: <input type="text" value="<%=list.user_name %>" name="uname"> <br>
+        비밀번호 : <input type="text" value="<%= list.pw %>" name="upw"><br>
+        이메일 : <input type="email" value="<%=list.email %>" name="uemail"> <br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

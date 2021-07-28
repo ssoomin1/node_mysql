@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <title>조회하기</title>
+</head>
+<body>
+    <h1>Member List</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>id</th>
+            <th>user_name</th>
+            <th>email</th>
+            <th> </th>
+            <th> </th>
+        </tr>
+        <% lists.forEach((list)=>{ %>
+            <tr>
+                <td><%= list.id %> </td>
+                <td><%= list.user_name %> </td>
+                <td><%= list.email %> </td>
+                <td><a href="/check/<%=list.user_name%>/1">edit</a></td>
+                <td><a href="/del/<%=list.user_name%>">delete</a></td>
+            </tr>
+        <% }) %>
+        <!-- <% lists.forEach((list)=>{ %>
+            <li>
+                <%= list.id %> &nbsp;
+                <%= list.user_name %> &nbsp;
+                <%= list.email %> &nbsp;
+            </li>
+        <% }) %> -->
+    </table>
+</body>
+</html>
